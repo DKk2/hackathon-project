@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Smart Campus Navigation System</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main class="container">
+      <h1>Smart Campus Navigation System</h1>
+      <p class="subtitle">Find the shortest path across campus using A* navigation.</p>
+
+      <section class="card">
+        <h2>Campus Map</h2>
+        <img src="../static/campus_map.png" alt="Campus map" class="campus-map" />
+      </section>
+
+      <section class="card">
+        <h2>QR Scan Simulation</h2>
+        <div class="row">
+          <select id="qrBuildingSelect"></select>
+          <button id="scanQrBtn">Scan QR</button>
+        </div>
+        <p id="qrStatus" class="status"></p>
+      </section>
+
+      <section class="card">
+        <h2>Navigate</h2>
+        <div class="grid">
+          <label>
+            Start Building
+            <select id="startSelect"></select>
+          </label>
+          <label>
+            Destination Building
+            <select id="endSelect"></select>
+          </label>
+        </div>
+
+        <button id="navigateBtn">Get Directions</button>
+
+        <div class="output">
+          <h3>Step-by-step Directions</h3>
+          <p id="directionsText">Select buildings and click "Get Directions".</p>
+          <p id="distanceText"></p>
+        </div>
+      </section>
+
+      <section class="card">
+        <h2>Search Building</h2>
+        <div class="row">
+          <input id="searchInput" type="text" placeholder="Type building name e.g., Lab 2" />
+          <button id="searchBtn">Search</button>
+        </div>
+        <p id="searchResult"></p>
+      </section>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
